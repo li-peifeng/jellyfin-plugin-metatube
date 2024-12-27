@@ -21,7 +21,7 @@ public class PluginConfiguration : BasePluginConfiguration
 #endif
 
 #if __EMBY__
-    [DisplayName("服务器")]
+    [DisplayName("后端服务器")]
     [Description("后端服务器的完整URL地址，推荐使用HTTPS。")]
     [Required]
 #endif
