@@ -39,7 +39,7 @@ public class OrganizeMetadataTask : IScheduledTask
 
     public string Name => "整理元数据";
 
-    public string Description => $"整理库中的所有媒体元数据";
+    public string Description => "整理库中的所有媒体元数据";
 
     public string Category => Plugin.Instance.Name;
 
