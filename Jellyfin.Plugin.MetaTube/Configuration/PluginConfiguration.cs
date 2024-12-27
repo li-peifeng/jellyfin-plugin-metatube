@@ -188,7 +188,7 @@ public class PluginConfiguration : BasePluginConfiguration
 #if __EMBY__
     [DisplayName("标题替换表")]
     [Description(
-        "每行一条记录，用等号隔开。将目标子字符串留空以删除源子字符串。")]
+        "每行一条记录，用等号隔开。将目标标题留空以删除源标题。")]
     [EditMultiline(5)]
 #endif
     public string TitleRawSubstitutionTable
