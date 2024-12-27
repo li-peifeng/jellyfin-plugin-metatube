@@ -22,7 +22,7 @@ public class PluginConfiguration : BasePluginConfiguration
 
 #if __EMBY__
     [DisplayName("服务器")]
-    [Description("服务器的完整URL地址，推荐使用HTTPS。")]
+    [Description("后端服务器的完整URL地址，推荐使用HTTPS。")]
     [Required]
 #endif
     public string Server { get; set; } = string.Empty;
