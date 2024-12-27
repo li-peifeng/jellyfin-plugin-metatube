@@ -121,12 +121,12 @@ public class PluginConfiguration : BasePluginConfiguration
     public bool EnableTemplate { get; set; } = false;
 
 #if __EMBY__
-    [DisplayName("模板名称")]
+    [DisplayName("影片名称")]
 #endif
     public string NameTemplate { get; set; } = DefaultNameTemplate;
 
 #if __EMBY__
-    [DisplayName("模板标签")]
+    [DisplayName("标签模版")]
 #endif
     public string TaglineTemplate { get; set; } = DefaultTaglineTemplate;
 
