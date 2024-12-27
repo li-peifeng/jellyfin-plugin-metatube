@@ -47,9 +47,9 @@ public class GenerateTrailersTask : IScheduledTask
 
     public string Key => $"{Plugin.Instance.Name}GenerateTrailers";
 
-    public string Name => "Generate Trailers";
+    public string Name => "生成预告片";
 
-    public string Description => $"Generates video trailers provided by {Plugin.Instance.Name} in library.";
+    public string Description => "生成媒体库中所有媒体的预告片";
 
     public string Category => Plugin.Instance.Name;
 
