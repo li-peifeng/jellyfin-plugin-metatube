@@ -14,7 +14,7 @@ def md5sum(filename):
 def generate(filename, version):
     return {
         'checksum': md5sum(filename),
-        'changelog': 'Auto Released by Actions',
+        'changelog': 'Auto Released By PeiFeng.Li',
         'targetAbi': '10.9.0.0',
         'sourceUrl': 'https://github.com/li-peifeng/jellyfin-plugin-metatube/releases/download/'
                      f'v{version}/Jellyfin.MetaTube@v{version}.zip',
