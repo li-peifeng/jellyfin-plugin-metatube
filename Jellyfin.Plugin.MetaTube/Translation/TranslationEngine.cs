@@ -4,16 +4,16 @@ namespace Jellyfin.Plugin.MetaTube.Translation;
 
 public enum TranslationEngine
 {
-    [Description("Baidu")]
+    [Description("百度")]
     Baidu,
 
-    [Description("Google")]
+    [Description("谷歌")]
     Google,
 
-    [Description("Google (Free)")]
+    [Description("谷歌 (免费)")]
     GoogleFree,
 
-    [Description("DeepL (Free)")]
+    [Description("DeepL (免费)")]
     DeepL,
 
     [Description("OpenAI")]
