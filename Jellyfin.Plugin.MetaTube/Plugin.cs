@@ -30,7 +30,7 @@ public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages
     }
 #endif
 
-    public override string Name => "MetaTube中文版";
+    public override string Name => "MetaTube";
 
     public override string Description => "Jellyfin/Emby 中文版 MetaTube 插件";
 
