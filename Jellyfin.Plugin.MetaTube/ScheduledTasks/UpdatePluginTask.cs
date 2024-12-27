@@ -35,9 +35,9 @@ public class UpdatePluginTask : IScheduledTask
 
     public string Key => $"{Plugin.Instance.Name}UpdatePlugin";
 
-    public string Name => "Update Plugin";
+    public string Name => "更新插件";
 
-    public string Description => $"Updates {Plugin.Instance.Name} plugin to latest version.";
+    public string Description => "更新插件到最新版本";
 
     public string Category => Plugin.Instance.Name;
 
@@ -59,7 +59,7 @@ public class UpdatePluginTask : IScheduledTask
         {
             var apiResult = JsonSerializer.Deserialize<ApiResponseInfo>(await _httpClient.Get(new HttpRequestOptions
             {
-                Url = "https://api.github.com/repos/metatube-community/jellyfin-plugin-metatube/releases/latest",
+                Url = "https://api.github.com/repos/li-peifeng/jellyfin-plugin-metatube/releases/latest",
                 CancellationToken = cancellationToken,
                 AcceptHeader = "application/json",
                 EnableDefaultUserAgent = true
@@ -70,14 +70,14 @@ public class UpdatePluginTask : IScheduledTask
 
             if (currentVersion.CompareTo(remoteVersion) < 0)
             {
-                _logger.Info("Found new plugin version: {0}", remoteVersion);
+                _logger.Info("查询到新版本: {0}", remoteVersion);
 
                 var url = apiResult?.Assets
                     .Where(asset => asset.Name.StartsWith("Emby") && asset.Name.EndsWith(".zip")).ToArray()
                     .FirstOrDefault()
                     ?.BrowserDownloadUrl;
                 if (!Uri.IsWellFormedUriString(url, UriKind.Absolute))
-                    throw new Exception("Invalid download url");
+                    throw new Exception("下载地址无效");
 
                 var zipStream = await _httpClient.Get(new HttpRequestOptions
                 {
@@ -89,18 +89,18 @@ public class UpdatePluginTask : IScheduledTask
 
                 _zipClient.ExtractAllFromZip(zipStream, _applicationPaths.PluginsPath, true);
 
-                _logger.Info("Plugin update complete");
+                _logger.Info("插件更新完成");
 
                 _applicationHost.NotifyPendingRestart();
             }
             else
             {
-                _logger.Info("No need to update");
+                _logger.Info("不需要更新");
             }
         }
         catch (Exception e)
         {
-            _logger.Error("Update error: {0}", e.Message);
+            _logger.Error("更新错误: {0}", e.Message);
         }
 
         progress?.Report(100);
