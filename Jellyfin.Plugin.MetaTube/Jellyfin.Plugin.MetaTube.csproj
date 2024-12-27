@@ -6,13 +6,13 @@
         <Platforms>AnyCPU</Platforms>
         <AssemblyName>MetaTube</AssemblyName>
         <Authors>MetaTube</Authors>
-        <Description>MetaTube Plugin for Jellyfin/Emby</Description>
+        <Description>Jellyfin/Emby MetaTube 插件中文版</Description>
         <Version>$([System.DateTime]::UtcNow.ToString(yyyy.Mdd.Hmm.0))</Version>
         <Copyright>Copyright © 2023 MetaTube</Copyright>
         <RepositoryType>Git</RepositoryType>
-        <RepositoryUrl>https://github.com/metatube-community/jellyfin-plugin-metatube.git</RepositoryUrl>
-        <PackageProjectUrl>https://github.com/metatube-community/jellyfin-plugin-metatube</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/metatube-community/jellyfin-plugin-metatube/blob/main/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/li-peifeng/jellyfin-plugin-metatube.git</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/li-peifeng/jellyfin-plugin-metatube</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/li-peifeng/jellyfin-plugin-metatube/blob/main/LICENSE</PackageLicenseUrl>
         <PackageIcon>thumb.png</PackageIcon>
         <PackageId>MetaTube</PackageId>
         <Company>MetaTube</Company>
