@@ -1,6 +1,12 @@
 <h1 align="center">Jellyfin Plugin MetaTube</h1>
 <p align="center"><b>English | <a href="README_ZH.md">简体中文</a></b></p>
 
+- 进入 Jellyfin 控制台 > 插件目录/存储库 > 设置，点击添加
+- 输入存储库名称：MetaTube
+- 输入存储库 URL：https://raw.githubusercontent.com/li-peifeng/jellyfin-plugin-metatube/refs/heads/dist/manifest.json
+- 在插件目录下找到 MetaTube，点击安装
+- 重启 Jellyfin
+
 <p align="center">
 <img alt="Plugin Banner" src="https://metatube-community.github.io/images/banner-dark.png"/>
 <br/>
