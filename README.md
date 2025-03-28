@@ -70,7 +70,3 @@ Welcome and feel free to ask any questions at [Discussions](https://github.com/m
 ## Licence
 
 This plugin is released under the [MIT](https://github.com/metatube-community/jellyfin-plugin-metatube/blob/main/LICENSE) License.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=metatube-community/jellyfin-plugin-metatube&type=Date)](https://star-history.com/#metatube-community/jellyfin-plugin-metatube&Date)
