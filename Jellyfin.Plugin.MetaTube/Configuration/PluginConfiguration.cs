@@ -163,6 +163,13 @@ public class PluginConfiguration : BasePluginConfiguration
     public string GoogleApiKey { get; set; } = string.Empty;
 
 #if __EMBY__
+    [DisplayName("Google api url")]
+    [Description("Custom Google translate api url. (optional)")]
+    [VisibleCondition(nameof(TranslationEngine), ValueCondition.IsEqual, TranslationEngine.Google)]
+#endif
+    public string GoogleApiUrl { get; set; } = string.Empty;
+
+#if __EMBY__
     [DisplayName("DeepL api key")]
     [VisibleCondition(nameof(TranslationEngine), ValueCondition.IsEqual, TranslationEngine.DeepL)]
 #endif
@@ -170,15 +177,30 @@ public class PluginConfiguration : BasePluginConfiguration
 
 #if __EMBY__
     [DisplayName("DeepL 其它 url (可选)")]
+    [Description("自定义 DeepL 兼容 API URL。（可选）")]
     [VisibleCondition(nameof(TranslationEngine), ValueCondition.IsEqual, TranslationEngine.DeepL)]
 #endif
-    public string DeepLAltUrl { get; set; } = string.Empty;
+    public string DeepLApiUrl { get; set; } = string.Empty;
 
 #if __EMBY__
     [DisplayName("OpenAI api key")]
     [VisibleCondition(nameof(TranslationEngine), ValueCondition.IsEqual, TranslationEngine.OpenAi)]
 #endif
     public string OpenAiApiKey { get; set; } = string.Empty;
+
+#if __EMBY__
+    [DisplayName("OpenAI api url")]
+    [Description("Custom OpenAI-compatible api url. (optional)")]
+    [VisibleCondition(nameof(TranslationEngine), ValueCondition.IsEqual, TranslationEngine.OpenAi)]
+#endif
+    public string OpenAiApiUrl { get; set; } = string.Empty;
+
+#if __EMBY__
+    [DisplayName("OpenAI model")]
+    [Description("Custom OpenAI-compatible api model. (optional)")]
+    [VisibleCondition(nameof(TranslationEngine), ValueCondition.IsEqual, TranslationEngine.OpenAi)]
+#endif
+    public string OpenAiModel { get; set; } = string.Empty;
 
 #if __EMBY__
     [DisplayName("Enable title substitution")]
